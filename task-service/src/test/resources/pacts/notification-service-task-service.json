@@ -1,0 +1,90 @@
+{
+  "consumer": {
+    "name": "notification-service"
+  },
+  "interactions": [
+    {
+      "description": "a request for task 1",
+      "key": "bdbdbe3e",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "task with id 1 exists"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/api/tasks/1"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "id": 1,
+            "status": "PENDING",
+            "title": "Sample task"
+          },
+          "contentType": "application/json; charset=UTF-8",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json; charset=UTF-8"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$.id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "number"
+                }
+              ]
+            },
+            "$.status": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            },
+            "$.title": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {
+            "Content-Type": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "regex",
+                  "regex": "application/json(;\\s?charset=[\\w\\-]+)?"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      },
+      "transport": "https",
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pact-jvm": {
+      "version": "4.6.10"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "task-service"
+  }
+}

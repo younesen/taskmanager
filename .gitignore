@@ -1,0 +1,98 @@
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Spring Boot fat jar
+[!/]*.jar
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+**/gradle/
+**/build/
+
+# Gradle cache
+gradle/
+gradlew
+gradlew.bat
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+bin/
+**/.metadata/
+*.prefs
+
+# NetBeans
+nbproject/
+nb-configuration.xml
+*.nbattrs
+.nb-gradle/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+*.swo
+
+# Application properties with secrets
+application-*.properties
+application-*.yml
+bootstrap-*.properties
+bootstrap-*.yml
+
+# Spring Boot Actuator & dump
+*.pid
+*.dump
+*.hprof
+
+# Temp files
+*.tmp
+*.bak
+*.old
+
+# Test reports
+test-output/
+**/test-output/
